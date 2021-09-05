@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Header, Icon, Step } from 'semantic-ui-react';
 
-import { NewRoomButton } from '../TopBar';
+
 import styles from './Home.module.css';
 
 export const Home = ({ user }: { user: firebase.User | undefined }) => {
