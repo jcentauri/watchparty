@@ -28,7 +28,6 @@ export class VBrowserModal extends React.Component<{
       ({ googleReCaptchaProps, large }: any) => (
         <Button
           size="large"
-          style={{ display: 'none' }}
           color={large ? 'orange' : undefined}
           onClick={async () => {
             const rcToken = await (googleReCaptchaProps as any).executeRecaptcha(
