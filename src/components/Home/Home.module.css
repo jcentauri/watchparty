@@ -11,7 +11,7 @@
   background-image: linear-gradient(to bottom, #222222, #006199);
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 50%;
-  display: none;
+  display: flex;
   justify-content: center;
 }
 
@@ -19,7 +19,6 @@
   background-image: linear-gradient(to bottom, #222222, rgb(21, 114, 43));
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 0%;
-  display: none;
 }
 
 .heroInner {
@@ -27,7 +26,6 @@
   max-width: 1200px;
   display: flex;
   align-items: center;
-  display: none;
 }
 
 @media only screen and (max-width: 600px) {
