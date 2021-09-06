@@ -123,12 +123,7 @@ export const SettingsTab = ({
           closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
       )}
-      <div className="sectionHeader">Room Settings</div>
-      {!user && (
-        <Message color="yellow" size="tiny">
-         
-        </Message>
-      )}
+
       
      
       {owner && owner === user?.uid && (
