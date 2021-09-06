@@ -1662,6 +1662,7 @@ export default class App extends React.Component<AppProps, AppState> {
                             icon
                             labelPosition="left"
                             color="green"
+                            style = {{display:'none'}}
                             onClick={() => {
                               this.setState({ isVBrowserModalOpen: true });
                             }}
