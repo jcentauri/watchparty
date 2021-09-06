@@ -169,7 +169,6 @@ export class ComboBox extends React.Component<ComboBoxProps> {
             }
           />
           <Dropdown
-            display="none"
             icon="list"
             labeled
             className="icon"
