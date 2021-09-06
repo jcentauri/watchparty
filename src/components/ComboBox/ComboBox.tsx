@@ -173,6 +173,7 @@ export class ComboBox extends React.Component<ComboBoxProps> {
             labeled
             className="icon"
             button
+            style={{ display: 'none' }}
             text={`Playlist (${this.props.playlist.length})`}
             scrolling
           >
