@@ -1614,7 +1614,7 @@ export default class App extends React.Component<AppProps, AppState> {
                   <Separator />
                   <div
                     className="mobileStack"
-                    style={{ display: 'none', gap: '4px' }}
+                    style={{ display: 'flex', gap: '4px' }}
                   >
                     {this.screenShareStream && (
                       <Button
