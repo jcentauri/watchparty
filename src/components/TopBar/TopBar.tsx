@@ -268,7 +268,7 @@ export class TopBar extends React.Component<{
       <React.Fragment>
         <div
           style={{
-            display: 'flex',
+            display: 'none',
             flexWrap: 'wrap',
             padding: '1em',
             paddingBottom: '0px',
@@ -283,6 +283,7 @@ export class TopBar extends React.Component<{
                 borderRadius: '50%',
                 position: 'relative',
                 backgroundColor: '#' + colorMappings.blue,
+                display: 'none',  
               }}
             >
               <Icon
@@ -294,6 +295,7 @@ export class TopBar extends React.Component<{
                   top: 8,
                   width: '100%',
                   margin: '0 auto',
+                  display: 'none',  
                 }}
               />
               <Icon
@@ -306,12 +308,13 @@ export class TopBar extends React.Component<{
                   bottom: 8,
                   width: '100%',
                   margin: '0 auto',
+                  display: 'none',
                 }}
               />
             </div>
             <div
               style={{
-                display: 'flex',
+                display: 'none',
                 alignItems: 'center',
               }}
             >
@@ -322,6 +325,7 @@ export class TopBar extends React.Component<{
                   color: '#2185d0',
                   fontSize: '30px',
                   lineHeight: '30px',
+                  display: 'none',
                 }}
               >
                 Watch
@@ -334,6 +338,7 @@ export class TopBar extends React.Component<{
                   fontSize: '30px',
                   lineHeight: '30px',
                   marginLeft: 'auto',
+                  display: 'none',  
                 }}
               >
                 Party
@@ -342,13 +347,13 @@ export class TopBar extends React.Component<{
           </a>
           <div
             style={{
-              display: 'flex',
+              display: 'none',
               marginLeft: '10px',
               alignItems: 'center',
             }}
           >
             <a
-              href="https://discord.gg/3rYj5HV"
+              href=" "
               target="_blank"
               rel="noopener noreferrer"
               className="footerIcon"
@@ -357,7 +362,7 @@ export class TopBar extends React.Component<{
               <Icon name="discord" size="big" link />
             </a>
             <a
-              href="https://github.com/howardchung/watchparty"
+              href=" "
               target="_blank"
               rel="noopener noreferrer"
               className="footerIcon"
@@ -369,7 +374,7 @@ export class TopBar extends React.Component<{
           <div
             className="mobileStack"
             style={{
-              display: 'flex',
+              display: 'none',
               marginLeft: 'auto',
               gap: '4px',
             }}
