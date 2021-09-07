@@ -125,7 +125,7 @@ export const SettingsTab = ({
       
  
       
-       <SettingRow
+         <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
           description={
@@ -138,9 +138,9 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={permanentEnabled}
-          disabled={permanentDisabled}
-
+          checked={() => setPermModalOpen(true)}
+          disabled={() => setPermModalOpen(false)}
+      
         />
 
       
