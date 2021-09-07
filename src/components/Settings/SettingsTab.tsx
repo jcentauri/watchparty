@@ -105,9 +105,9 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
   const lockDisabled =
-    !Boolean(user);
+    !Boolean();
   const permanentDisabled =
-    !Boolean(user);
+    !Boolean();
 
   return (
     <div
@@ -146,7 +146,7 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={Boolean(user)}
+          checked={Boolean()}
           disabled={permanentDisabled}
       
         />
