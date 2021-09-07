@@ -120,7 +120,7 @@ export const SettingsTab = ({
     >
       {permModalOpen && (
         <PermanentRoomModal
-          closeModal={() => setPermModalOpen(false)}
+          closeModal={() => setPermModalOpen(true)}
         ></PermanentRoomModal>
       )}
       
