@@ -104,10 +104,9 @@ export const SettingsTab = ({
     },
     [setValidVanity, roomLink]
   );
-  const lockDisabled =
-    !Boolean(roomLock);
-  const permanentDisabled =
-    !Boolean(permanentEnabled);
+
+  
+  
 
   return (
     <div
@@ -124,16 +123,9 @@ export const SettingsTab = ({
         ></PermanentRoomModal>
       )}
       
-      <SettingRow
-        icon={roomLock ? 'lock' : 'lock open'}
-        name={`Lock Room`}
-        description="Only the person who locked the room can control the video."
-        checked={Boolean(roomLock)}
-        disabled={lockDisabled}
-   
-      />
-      {
-        <SettingRow
+ 
+      
+       <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
           description={
@@ -146,11 +138,10 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={Boolean(permanentEnabled)}
+          checked={permanentEnabled}
           disabled={permanentDisabled}
-      
+
         />
-      }
 
       
       {owner && owner === user?.uid && (
