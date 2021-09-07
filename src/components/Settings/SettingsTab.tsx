@@ -123,7 +123,8 @@ export const SettingsTab = ({
           closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
       )}
-
+      
+      {
       <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
@@ -141,7 +142,8 @@ export const SettingsTab = ({
           disabled={permanentDisabled}
           onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
         />
-     
+     }
+      
       {owner && owner === user?.uid && (
         <div className="sectionHeader">Admin Settings</div>
       )}
