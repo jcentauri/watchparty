@@ -105,7 +105,7 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
 
-const [permanentEnabled, setPermanentEnabled] =
+const permanentDisabled =
     Boolean(false);
      
 
@@ -140,10 +140,10 @@ const [permanentEnabled, setPermanentEnabled] =
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={!(permanentEnabled)}
-          disabled={permanentEnabled}
+          checked={!(permanentDisabled)}
+          disabled={permanentDisabled}
           onChange={(_e, data) => {
-              setPermanentEnabled(Boolean(data.checked));
+              permanentDisabled(Boolean(data.checked));
         }}
         />
 
