@@ -106,8 +106,7 @@ export const SettingsTab = ({
   );
 
 
-  const permanentEnabled =
-    Boolean(user);
+
   
 
   return (
@@ -137,15 +136,16 @@ export const SettingsTab = ({
           helpIcon={
             <Icon
               name="help circle"
-              onClick={() => setPermModalOpen(true)}
+              onClick={() => setPermModalOpen(false)}
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
           
-         checked={Boolean(user)}
-         disabled={!(permanentEnabled)}   
-
-
+          disabled={Boolean(isPermanentDisabled)}
+          checked={true}
+          onChange={(_e, data) => {
+            setIsPermanentDisabled(Boolean(data.checked));
+         }}
         />
 
 
