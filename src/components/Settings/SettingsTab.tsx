@@ -105,8 +105,7 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
 
-const permanentEnabled =
-    Boolean(user);
+
   
   
 
@@ -141,9 +140,8 @@ const permanentEnabled =
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={permanentEnabled}
-          disabled={!(permanentEnabled)}
-          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
+             onChange={() => setPermModalOpen(true)}
+
         />
 
 
