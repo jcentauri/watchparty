@@ -105,6 +105,8 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
 
+const permanentDisabled =
+    booleen(false);
   
   
 
@@ -123,9 +125,8 @@ export const SettingsTab = ({
         ></PermanentRoomModal>
       )}
       
-      
- const permanentDisabled =
-    !Boolean();
+ 
+
       
      <SettingRow
           icon={'clock'}
