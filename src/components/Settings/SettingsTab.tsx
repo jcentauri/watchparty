@@ -144,7 +144,7 @@ export const SettingsTab = ({
           
          checked={Boolean(user)}
          disabled={!(permanentEnabled)}   
-         onChange={() => setPermModalOpen(true)}
+
 
         />
 
