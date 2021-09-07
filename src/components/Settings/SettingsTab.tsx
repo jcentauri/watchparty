@@ -141,10 +141,10 @@ export const SettingsTab = ({
             ></Icon>
           }
           
-          disabled={Boolean(IsPermanentDisabled)}
+          disabled={!Boolean(PermanentDisabled)}
           checked={true}
           onChange={(_e, data) => {
-            setIsPermanentDisabled(Boolean(data.checked));
+            setPermanentDisabled(Boolean(data.checked));
          }}
         />
 
