@@ -106,7 +106,8 @@ export const SettingsTab = ({
   );
 
 
-  
+  const permanentEnabled =
+    Boolean(user);
   
 
   return (
@@ -140,7 +141,10 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-             onChange={() => setPermModalOpen(true)}
+          
+         checked={Boolean(user)}
+         disabled={!(permanentEnabled)}   
+         onChange={() => setPermModalOpen(true)}
 
         />
 
