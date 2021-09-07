@@ -105,8 +105,9 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
 
-
-
+const permanentEnabled =
+    Boolean(true);
+     
   
 
   return (
@@ -127,7 +128,7 @@ export const SettingsTab = ({
  
 
       
-     <SettingRow
+  <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
           description={
@@ -136,16 +137,13 @@ export const SettingsTab = ({
           helpIcon={
             <Icon
               name="help circle"
-              onClick={() => setPermModalOpen(false)}
+              onClick={() => setPermModalOpen(true)}
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          
-          disabled={!Boolean(PermanentDisabled)}
-          checked={true}
-          onChange={(_e, data) => {
-            setPermanentDisabled(Boolean(data.checked));
-         }}
+  
+          disabled={!(permanentEnabled)}
+         
         />
 
 
