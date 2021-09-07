@@ -143,7 +143,7 @@ const permanentDisabled =
           }
       
           disabled={permanentDisabled}
-          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
+          onChange={() => setPermModalOpen(true)}
         />
 
 
