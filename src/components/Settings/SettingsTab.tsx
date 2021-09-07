@@ -140,10 +140,9 @@ const permanentDisabled =
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={!(permanentDisabled)}
+          checked={Boolean(owner)}
           disabled={permanentDisabled}
-          onChange={(_e, data) => {
-              permanentDisabled(Boolean(data.checked));
+          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
         }}
         />
 
