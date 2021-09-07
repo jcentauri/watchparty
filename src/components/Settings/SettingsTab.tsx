@@ -144,6 +144,7 @@ const [permanentEnabled, setPermanentEnabled] =
           disabled={permanentEnabled}
           onChange={(_e, data) => {
               setPermanentEnabled(Boolean(data.checked));
+        }}
         />
 
 
