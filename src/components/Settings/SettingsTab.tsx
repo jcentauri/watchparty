@@ -238,7 +238,7 @@ const permanentDisabled =
         />
       )}
       <p />
-      {owner && owner === user?.uid && (
+     
         <Button
           primary
           disabled={!validVanity || !adminSettingsChanged}
@@ -257,7 +257,7 @@ const permanentDisabled =
           <Icon name="save" />
           Save Admin Settings
         </Button>
-      )}
+   
       {/* MEDIA_PATH */}
       <div className="sectionHeader">Local Settings</div>
       <SettingRow
