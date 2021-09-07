@@ -106,7 +106,7 @@ export const SettingsTab = ({
   );
 
 const permanentDisabled =
-    booleen(false);
+    Boolean(false);
   
   
 
