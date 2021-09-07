@@ -12,8 +12,7 @@ export class PermanentRoomModal extends React.Component<{
         <Modal.Content image>
           <Modal.Description>
             <div>
-              Registered users have the ability to make their rooms permanent.
-              Subscribed users can create multiple permanent rooms.
+
             </div>
             <Table definition unstackable striped celled>
               <Table.Header>
@@ -30,39 +29,8 @@ export class PermanentRoomModal extends React.Component<{
                   <Table.Cell>After 24 hours of inactivity</Table.Cell>
                   <Table.Cell>Never</Table.Cell>
                 </Table.Row>
-                <Table.Row>
-                  <Table.Cell>Room Passwords</Table.Cell>
-                  <Table.Cell></Table.Cell>
-                  <Table.Cell>
-                    <Icon name="check" />
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>Disable Chat</Table.Cell>
-                  <Table.Cell></Table.Cell>
-                  <Table.Cell>
-                    <Icon name="check" />
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>Kick Users</Table.Cell>
-                  <Table.Cell></Table.Cell>
-                  <Table.Cell>
-                    <Icon name="check" />
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>Custom Room URLs (subscribers)</Table.Cell>
-                  <Table.Cell></Table.Cell>
-                  <Table.Cell>
-                    <Icon name="check" />
-                  </Table.Cell>
-                </Table.Row>
-                {/* <Table.Row>
-                  <Table.Cell>Max Room Capacity (subscribers)</Table.Cell>
-                    <Table.Cell>20</Table.Cell>
-                    <Table.Cell>100</Table.Cell>
-                  </Table.Row> */}
+              
+          
               </Table.Body>
             </Table>
           </Modal.Description>
