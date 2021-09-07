@@ -140,7 +140,7 @@ const [permanentEnabled, setPermanentEnabled] =
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={!(permanentEnabled}
+          checked={!(permanentEnabled)}
           disabled={permanentEnabled}
           onChange={(_e, data) => {
               setPermanentEnabled(Boolean(data.checked));
