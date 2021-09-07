@@ -221,6 +221,7 @@ export const SettingsTab = ({
       )}
       <p />
      
+     {owner && owner === user?.uid && (
         <Button
           primary
           disabled={!validVanity || !adminSettingsChanged}
@@ -239,6 +240,7 @@ export const SettingsTab = ({
           <Icon name="save" />
           Save Admin Settings
         </Button>
+      )}
    
       {/* MEDIA_PATH */}
       <div className="sectionHeader">Local Settings</div>
