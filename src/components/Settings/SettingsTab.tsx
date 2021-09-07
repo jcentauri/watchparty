@@ -125,24 +125,7 @@ export const SettingsTab = ({
       
  
       
-         <SettingRow
-          icon={'clock'}
-          name={`Make Room Permanent`}
-          description={
-            'Prevent this room from expiring. This also unlocks additional room features.'
-          }
-          helpIcon={
-            <Icon
-              name="help circle"
-              onClick={() => setPermModalOpen(true)}
-              style={{ cursor: 'pointer' }}
-            ></Icon>
-          }
-         
-          disabled={() => setPermModalOpen(false)}
-      
-      
-        />
+
 
       
       {owner && owner === user?.uid && (
