@@ -138,8 +138,9 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={() => setPermModalOpen(true)}
+         
           disabled={() => setPermModalOpen(false)}
+      
       
         />
 
