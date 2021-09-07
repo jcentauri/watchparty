@@ -124,7 +124,8 @@ export const SettingsTab = ({
       )}
       
       
-   const permanentDisabled = false ;
+ const permanentDisabled =
+    !Boolean();
       
      <SettingRow
           icon={'clock'}
