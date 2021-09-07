@@ -142,7 +142,7 @@ const permanentDisabled =
           }
        
           disabled={permanentDisabled}
-          onChange={() => setPermModalOpen(true)}
+          onChange={() =>  permanentDisabled =  Boolean(true);}
         />
 
 
