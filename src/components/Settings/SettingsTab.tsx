@@ -125,9 +125,7 @@ export const SettingsTab = ({
       )}
       <div className="sectionHeader">Room Settings</div>
    
-      <SettingRow
- 
-      />
+   
       {
         <SettingRow
           icon={'clock'}
