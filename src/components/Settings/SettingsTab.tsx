@@ -53,7 +53,7 @@ export const SettingsTab = ({
   clearChat,
 }: SettingsTabProps) => {
   const [updateTS, setUpdateTS] = useState(0);
-  const [permModalOpen, setPermModalOpen] = useState(true);
+  const [permModalOpen, setPermModalOpen] = useState(false);
   const [validVanity, setValidVanity] = useState(true);
   const [validVanityLoading, setValidVanityLoading] = useState(false);
   const [adminSettingsChanged, setAdminSettingsChanged] = useState(false);
@@ -120,11 +120,29 @@ export const SettingsTab = ({
     >
       {permModalOpen && (
         <PermanentRoomModal
-          closeModal={() => setPermModalOpen(true)}
+          closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
       )}
       
- 
+  {
+        <SettingRow
+          icon={'clock'}
+          name={`Make Room Permanent`}
+          description={
+            'Prevent this room from expiring. This also unlocks additional room features.'
+          }
+          helpIcon={
+            <Icon
+              name="help circle"
+              onClick={() => setPermModalOpen(true)}
+              style={{ cursor: 'pointer' }}
+            ></Icon>
+          }
+          checked={Boolean(owner)}
+          disabled={permanentDisabled}
+          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
+        />
+      }
 
       
  
