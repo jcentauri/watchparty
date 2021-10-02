@@ -130,12 +130,7 @@ export const SettingsTab = ({
         </Message>
       )}
       <SettingRow
-        icon={roomLock ? 'lock' : 'lock open'}
-        name={`Lock Room`}
-        description="Only the person who locked the room can control the video."
-        checked={Boolean(roomLock)}
-        disabled={lockDisabled}
-        onChange={(_e, data) => setRoomLock(data.checked)}
+ 
       />
       {
         <SettingRow
