@@ -122,11 +122,8 @@ export const SettingsTab = ({
         <PermanentRoomModal
           closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
-      )}
-      <div className="sectionHeader">Room Settings</div>
+    
    
-   
-      {
         <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
@@ -142,7 +139,8 @@ export const SettingsTab = ({
           }
  
         />
-      }
+        
+   )}
       
  
 
