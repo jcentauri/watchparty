@@ -53,7 +53,7 @@ export const SettingsTab = ({
   clearChat,
 }: SettingsTabProps) => {
   const [updateTS, setUpdateTS] = useState(0);
-  const [permModalOpen, setPermModalOpen] = useState(false);
+  const [permModalOpen, setPermModalOpen] = useState(true);
   const [validVanity, setValidVanity] = useState(true);
   const [validVanityLoading, setValidVanityLoading] = useState(false);
   const [adminSettingsChanged, setAdminSettingsChanged] = useState(false);
