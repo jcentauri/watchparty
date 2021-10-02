@@ -124,11 +124,7 @@ export const SettingsTab = ({
         ></PermanentRoomModal>
       )}
       <div className="sectionHeader">Room Settings</div>
-      {!user && (
-        <Message color="yellow" size="tiny">
-          You need to be signed in to change these settings.
-        </Message>
-      )}
+   
       <SettingRow
  
       />
@@ -146,9 +142,7 @@ export const SettingsTab = ({
               style={{ cursor: 'pointer' }}
             ></Icon>
           }
-          checked={Boolean(owner)}
-          disabled={permanentDisabled}
-          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
+ 
         />
       }
       
