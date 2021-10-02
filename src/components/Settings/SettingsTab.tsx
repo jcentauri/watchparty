@@ -123,8 +123,21 @@ export const SettingsTab = ({
           closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
       )}
-      
-  {
+      <div className="sectionHeader">Room Settings</div>
+      {!user && (
+        <Message color="yellow" size="tiny">
+          You need to be signed in to change these settings.
+        </Message>
+      )}
+      <SettingRow
+        icon={roomLock ? 'lock' : 'lock open'}
+        name={`Lock Room`}
+        description="Only the person who locked the room can control the video."
+        checked={Boolean(roomLock)}
+        disabled={lockDisabled}
+        onChange={(_e, data) => setRoomLock(data.checked)}
+      />
+      {
         <SettingRow
           icon={'clock'}
           name={`Make Room Permanent`}
@@ -143,7 +156,6 @@ export const SettingsTab = ({
           onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
         />
       }
-
       
  
 
