@@ -124,11 +124,9 @@ const lockDisabled =
         ></PermanentRoomModal>
       )}
       <div className="sectionHeader">Room Settings</div>
-      {!user && (
-        <Message color="yellow" size="tiny">
-          You need to be signed in to change these settings.
-        </Message>
-      )}
+ 
+      
+      
       <SettingRow
         icon={roomLock ? 'lock' : 'lock open'}
         name={`Lock Room`}
