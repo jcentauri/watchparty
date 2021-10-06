@@ -104,10 +104,10 @@ export const SettingsTab = ({
     },
     [setValidVanity, roomLink]
   );
-
-
-  
-     
+const lockDisabled =
+    !Boolean(user) || Boolean(roomLock && roomLock !== user?.uid);
+  const permanentDisabled =
+    !Boolean(user) || Boolean(owner && owner !== user?.uid);
 
   return (
     <div
@@ -120,14 +120,42 @@ export const SettingsTab = ({
     >
       {permModalOpen && (
         <PermanentRoomModal
-          closeModal={() => setPermModalOpen(true)}
+          closeModal={() => setPermModalOpen(false)}
         ></PermanentRoomModal>
-    
-
-        
-   )}
-      
- 
+      )}
+      <div className="sectionHeader">Room Settings</div>
+      {!user && (
+        <Message color="yellow" size="tiny">
+          You need to be signed in to change these settings.
+        </Message>
+      )}
+      <SettingRow
+        icon={roomLock ? 'lock' : 'lock open'}
+        name={`Lock Room`}
+        description="Only the person who locked the room can control the video."
+        checked={Boolean(roomLock)}
+        disabled={lockDisabled}
+        onChange={(_e, data) => setRoomLock(data.checked)}
+      />
+      {
+        <SettingRow
+          icon={'clock'}
+          name={`Make Room Permanent`}
+          description={
+            'Prevent this room from expiring. This also unlocks additional room features.'
+          }
+          helpIcon={
+            <Icon
+              name="help circle"
+              onClick={() => setPermModalOpen(true)}
+              style={{ cursor: 'pointer' }}
+            ></Icon>
+          }
+          checked={Boolean(owner)}
+          disabled={permanentDisabled}
+          onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
+        />
+      }
 
       
       {owner && owner === user?.uid && (
