@@ -105,9 +105,9 @@ export const SettingsTab = ({
     [setValidVanity, roomLink]
   );
   const lockDisabled =
-    !Boolean(user) || Boolean(roomLock && roomLock !== user?.uid);
+    Boolean(user) || Boolean(roomLock && roomLock !== user?.uid);
   const permanentDisabled =
-    !Boolean(user) || Boolean(owner && owner !== user?.uid);
+    Boolean(user) || Boolean(owner && owner !== user?.uid);
 
   return (
     <div
@@ -150,7 +150,7 @@ export const SettingsTab = ({
             ></Icon>
           }
           checked={Boolean(owner)}
-
+          disabled={permanentDisabled}
           onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
         />
       }
