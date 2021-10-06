@@ -132,7 +132,7 @@ const lockDisabled =
         name={`Lock Room`}
         description="Only the person who locked the room can control the video."
         checked={Boolean(roomLock)}
-        disabled={lockDisabled}
+
         onChange={(_e, data) => setRoomLock(data.checked)}
       />
       {
@@ -150,7 +150,7 @@ const lockDisabled =
             ></Icon>
           }
           checked={Boolean(owner)}
-          disabled={permanentDisabled}
+
           onChange={(_e, data) => setRoomOwner({ undo: !data.checked })}
         />
       }
